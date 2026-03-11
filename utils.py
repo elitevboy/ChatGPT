@@ -11,5 +11,6 @@ def get_chat_response(prompt, memory, openai_api_key):
     return response["response"]
 
 memory = ConversationBufferMemory(return_messages = True)
-# print(get_chat_response("牛顿提供那些之名定律", memory, "sk-jQC9dqBMFtCm8wc9r0TgqWNkAoE6luk6o6cE2WK3zHXoKRvs"))
+
+
 
