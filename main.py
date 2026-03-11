@@ -28,7 +28,7 @@ from langchain.memory import ConversationBufferMemory
 
 st.title("🚀GPT知识问答AI助手")
 
-openai_api_key = "sk-jQC9dqBMFtCm8wc9r0TgqWNkAoE6luk6o6cE2WK3zHXoKRvs"
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 # with st.sidebar:
 #     openai_api_key = st.text_input("请输入OpenAI API Key：", type="password")
@@ -54,4 +54,5 @@ if prompt:
     msg = {"role": "ai", "content": response}
     st.session_state["messages"].append(msg)
     st.chat_message("ai").write(response)
+
 
